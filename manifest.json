@@ -1,21 +1,21 @@
 {
-  "name": "Ember Builder",
-  "short_name": "Ember Builder",
-  "start_url": "/index.html",
+  "name": "月尘写表器",
+  "short_name": "写表器",
+  "start_url": "/builder-web/",
+  "scope": "/builder-web/",
   "display": "standalone",
-  "orientation": "landscape-primary",
-  "background_color": "#000000",
-  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "theme_color": "#4F46E5",
   "icons": [
     {
-      "src": "/res/logo.jpg",
+      "src": "res/logo.jpg",
       "sizes": "192x192",
-      "type": "image/jpg"
+      "type": "image/jpeg"
     },
     {
-      "src": "/res/logo.jpg",
+      "src": "res/logo.jpg",
       "sizes": "512x512",
-      "type": "image/jpg"
+      "type": "image/jpeg"
     }
   ]
 }
