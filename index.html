@@ -19,6 +19,29 @@
     gtag('js', new Date());
 
     gtag('config', 'G-C20B5DP4NF');  
+
+    if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("/service-worker.js")
+      .then((registration) => {
+        console.log("Service Worker registered:", registration);
+
+        // 监听更新
+        registration.onupdatefound = () => {
+          const newWorker = registration.installing;
+          newWorker?.addEventListener("statechange", () => {
+            if (newWorker.state === "activated") {
+              console.log("New SW activated, reloading page");
+              window.location.reload(); // 激活后刷新页面拿最新版本
+            }
+          });
+        };
+      })
+      .catch((err) => console.error("SW registration failed:", err));
+  });
+}
+
   </script>
   <script type="module" crossorigin src="/builder-web/assets/index.Bp4Iek4P.js"></script>
   <link rel="stylesheet" crossorigin href="/builder-web/assets/index.BbE98JH4.css">
