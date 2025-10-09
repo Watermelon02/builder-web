@@ -1,7 +1,13 @@
+// service-worker.js
+
 const CACHE_NAME = 'mech-images-v1';
 
-self.addEventListener('install', (event) => self.skipWaiting());
+// 安装：跳过等待，立即激活
+self.addEventListener('install', (event) => {
+  self.skipWaiting();
+});
 
+// 激活：清理旧缓存
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((keys) =>
@@ -15,33 +21,31 @@ self.addEventListener('activate', (event) => {
   clients.claim();
 });
 
+// 拦截 fetch 请求
 self.addEventListener('fetch', (event) => {
   const req = event.request;
 
-  // 只缓存同源图片
-  if (req.destination === 'image' && new URL(req.url).origin === self.origin) {
+  if (req.destination === 'image' || req.url.match(/\.(png|jpg|jpeg|gif|webp)$/)) {
     event.respondWith(
       caches.match(req).then((cachedResponse) => {
         if (cachedResponse) return cachedResponse;
 
         return fetch(req)
           .then((networkResponse) => {
-            caches.open(CACHE_NAME).then((cache) => cache.put(req, networkResponse.clone()));
-            return networkResponse;
+            return caches.open(CACHE_NAME).then((cache) => {
+              cache.put(req, networkResponse.clone());
+              return networkResponse;
+            });
           })
           .catch(() => {
-            // 返回透明 1x1 PNG 占位图
-            return new Response(
-              Uint8Array.from([
-                137,80,78,71,13,10,26,10,0,0,0,13,73,72,68,82,
-                0,0,0,1,0,0,0,1,8,6,0,0,0,31,21,196,137,
-                0,0,0,12,73,68,65,84,8,153,99,0,1,0,0,5,0,1,
-                13,10,26,10,0,0,0,0,73,69,78,68,174,66,96,130
-              ]),
-              { headers: { 'Content-Type': 'image/png' } }
-            );
-          })
+            const placeholder = `data:image/svg+xml;base64,${btoa(`<svg width="150" height="150" xmlns="http://www.w3.org/2000/svg">
+              <rect width="150" height="150" fill="#ddd"/>
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#666" font-size="12">Image Not Found</text>
+            </svg>`)}`;
+            return fetch(placeholder);
+          });
       })
     );
   }
 });
+
