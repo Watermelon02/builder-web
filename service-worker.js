@@ -1,81 +1,91 @@
-// // service-worker.js
+// service-worker.js
 
-// const CACHE_NAME = 'mech-images-v1';
-
-// // 安装：跳过等待，立即激活
-// self.addEventListener('install', (event) => {
+// // 跳过等待，立即激活
+// self.addEventListener("install", (event) => {
 //   self.skipWaiting();
 // });
 
-// // 激活：清理旧缓存
-// self.addEventListener('activate', (event) => {
+// // 激活时清理所有旧缓存
+// self.addEventListener("activate", (event) => {
 //   event.waitUntil(
 //     caches.keys().then((keys) =>
-//       Promise.all(
-//         keys
-//           .filter((key) => key !== CACHE_NAME)
-//           .map((key) => caches.delete(key))
-//       )
+//       Promise.all(keys.map((key) => caches.delete(key)))
 //     )
 //   );
-//   clients.claim();
+//   clients.claim(); // 立即控制所有页面
 // });
 
-// // 拦截 fetch 请求
-// self.addEventListener('fetch', (event) => {
-//   const req = event.request;
-
-//   if (req.destination === 'image' || req.url.match(/\.(png|jpg|jpeg|gif|webp)$/)) {
-//     event.respondWith(
-//       caches.match(req).then((cachedResponse) => {
-//         if (cachedResponse) return cachedResponse;
-
-//         return fetch(req)
-//           .then((networkResponse) => {
-//             return caches.open(CACHE_NAME).then((cache) => {
-//               cache.put(req, networkResponse.clone());
-//               return networkResponse;
-//             });
-//           })
-//           .catch(() => {
-//             const placeholder = `data:image/svg+xml;base64,${btoa(`<svg width="150" height="150" xmlns="http://www.w3.org/2000/svg">
-//               <rect width="150" height="150" fill="#ddd"/>
-//               <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#666" font-size="12">Image Not Found</text>
-//             </svg>`)}`;
-//             return fetch(placeholder);
-//           });
-//       })
-//     );
-//   }
+// // 所有请求都强制刷新缓存
+// self.addEventListener("fetch", (event) => {
+//   event.respondWith(
+//     fetch(event.request, { cache: "reload" })
+//       .catch(() => 
+//         caches.match(event.request)
+//           .then((cachedResponse) => cachedResponse || new Response("Not found", { status: 404 }))
+//       )
+//   );
 // });
 
 
-// service-worker.js
+const CACHE_NAME = 'my-cache';
+const CACHE_MAX_AGE = 1 * 60 * 60 * 1000; // 1小时
 
-// 跳过等待，立即激活
 self.addEventListener("install", (event) => {
   self.skipWaiting();
 });
 
-// 激活时清理所有旧缓存
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches.keys().then((keys) =>
       Promise.all(keys.map((key) => caches.delete(key)))
     )
   );
-  clients.claim(); // 立即控制所有页面
+  clients.claim();
 });
 
-// 所有请求都强制刷新缓存
 self.addEventListener("fetch", (event) => {
   event.respondWith(
-    fetch(event.request, { cache: "reload" })
-      .catch(() => 
-        caches.match(event.request)
-          .then((cachedResponse) => cachedResponse || new Response("Not found", { status: 404 }))
-      )
+    caches.open(CACHE_NAME).then(async (cache) => {
+      const cachedResponse = await cache.match(event.request);
+      if (cachedResponse) {
+        // 检查是否过期
+        const fetchedTime = cachedResponse.headers.get('sw-fetched-time');
+        if (!fetchedTime || (Date.now() - Number(fetchedTime) > CACHE_MAX_AGE)) {
+          fetchAndCache(event.request, cache); // 异步刷新
+        }
+        return cachedResponse;
+      } else {
+        return fetchAndCache(event.request, cache);
+      }
+    })
   );
 });
+
+async function fetchAndCache(request, cache) {
+  try {
+    const response = await fetch(request);
+    if (response.ok) {
+      // 克隆并加自定义 header
+      const headers = new Headers(response.headers);
+      headers.set('sw-fetched-time', Date.now());
+      const cloned = new Response(response.body, {
+        status: response.status,
+        statusText: response.statusText,
+        headers
+      });
+      cache.put(request, cloned.clone());
+      return cloned;
+    } else {
+      // 不缓存 404 或错误响应
+      return response;
+    }
+  } catch (err) {
+    // 网络失败 fallback
+    const cached = await cache.match(request);
+    return cached || new Response("Not found", { status: 404 });
+  }
+}
+
+
 
 
