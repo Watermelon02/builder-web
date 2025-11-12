@@ -1,5 +1,5 @@
 service-worker.js
-const CACHE_NAME = 'my-cache-2';
+const CACHE_NAME = 'my-cache-3';
 
 // 跳过等待，立即激活
 self.addEventListener("install", (event) => {
