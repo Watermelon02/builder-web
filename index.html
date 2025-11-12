@@ -35,29 +35,47 @@
   <div id="root"></div>
 
   <!-- ✅ Service Worker 独立脚本 -->
-  <!-- <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker
-          .register(`${location.origin}${location.pathname}service-worker.js`)
-          .then((registration) => {
-            console.log('Service Worker registered:', registration);
+  <script>
+    // if ('serviceWorker' in navigator) {
+    //   window.addEventListener('load', () => {
+    //     navigator.serviceWorker
+    //       .register(`${location.origin}${location.pathname}service-worker.js`)
+    //       .then((registration) => {
+    //         console.log('Service Worker registered:', registration);
 
-            // 检测更新
-            registration.onupdatefound = () => {
-              const newWorker = registration.installing;
-              newWorker?.addEventListener('statechange', () => {
-                if (newWorker.state === 'activated') {
-                  console.log('New SW activated, reloading page');
-                  window.location.reload();
-                }
-              });
-            };
-          })
-          .catch((err) => console.error('SW registration failed:', err));
-      });
+    //         // 检测更新
+    //         registration.onupdatefound = () => {
+    //           const newWorker = registration.installing;
+    //           newWorker?.addEventListener('statechange', () => {
+    //             if (newWorker.state === 'activated') {
+    //               console.log('New SW activated, reloading page');
+    //               window.location.reload();
+    //             }
+    //           });
+    //         };
+    //       })
+    //       .catch((err) => console.error('SW registration failed:', err));
+    //   });
+    // }
+    if ('serviceWorker' in navigator) {
+  // 获取所有注册的 Service Worker
+  navigator.serviceWorker.getRegistrations().then((registrations) => {
+    for (let registration of registrations) {
+      registration.unregister();
     }
-  </script> -->
+  });
+
+  // 清理缓存存储
+  if (window.caches) {
+    caches.keys().then((keyList) => {
+      return Promise.all(keyList.map((key) => caches.delete(key)));
+    });
+  }
+
+  console.log('✅ 所有 Service Worker 和缓存已清理');
+}
+
+  </script>
 </body>
 
 </html>
