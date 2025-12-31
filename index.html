@@ -4,86 +4,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- 清理serviceworker -->
-   <!-- <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-<meta http-equiv="Pragma" content="no-cache" />
-<meta http-equiv="Expires" content="0" /> -->
-
-
   <title>月尘写表器</title>
 
-  <!-- 字体 -->
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet" /> -->
-  <link href="https://fonts.loli.net/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
-<link href="https://fonts.loli.net/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
-<link href="https://fonts.loli.net/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
-
-
-
-  <!-- ✅ Google Analytics：必须先于 main.tsx 加载 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C20B5DP4NF"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-C20B5DP4NF');
-    console.log("✅ Google Analytics 初始化完成");
+    (function() {
+      // 1. 判定是否在中国大陆 (UTC+8)
+      var isChina = new Date().getTimezoneOffset() === -480;
+      
+      // 2. 动态加载字体
+      var fontDomain = isChina ? 'fonts.geekzu.org' : 'fonts.googleapis.com';
+      var fontFamilies = [
+        'Orbitron:wght@400;500;700',
+        'Noto+Sans+SC:wght@400;500;700',
+        'Kosugi+Maru'
+      ];
+
+      fontFamilies.forEach(function(family) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'https://' + fontDomain + '/css2?family=' + family + '&display=swap';
+        document.head.appendChild(link);
+      });
+
+      // 3. 动态加载 Google Analytics (仅限非中国地区)
+      if (!isChina) {
+        var gaScript = document.createElement('script');
+        gaScript.async = true;
+        gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-C20B5DP4NF';
+        document.head.appendChild(gaScript);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-C20B5DP4NF');
+        console.log("🌐 境外模式：已激活 Google Analytics");
+      } else {
+        console.log("🚀 境内模式：已跳过 GA，改用极速字体镜像");
+      }
+    })();
   </script>
+
   <script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?f8fe7a809a811fc54a1b6acf3cd2d608";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?f8fe7a809a811fc54a1b6acf3cd2d608";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
-
-  <!-- ✅ 主入口脚本 -->
-  <script type="module" crossorigin src="/builder-web/assets/index.Cg28Cd5W.js"></script>
-  <link rel="stylesheet" crossorigin href="/builder-web/assets/index.Cgr8-ArQ.css">
+  <script type="module" crossorigin src="/builder-web/assets/index.B6x1y8VL.js"></script>
+  <link rel="stylesheet" crossorigin href="/builder-web/assets/index.CbFUYE8R.css">
 </head>
 
 <body>
   <div id="root"></div>
 
-  <!-- ✅ Service Worker 独立脚本 -->
   <script>
-    // if ('serviceWorker' in navigator) {
-    //   window.addEventListener('load', () => {
-    //     navigator.serviceWorker
-    //       .register(`${location.origin}${location.pathname}service-worker.js`)
-    //       .then((registration) => {
-    //         console.log('Service Worker registered:', registration);
-
-    //         // 检测更新
-    //         registration.onupdatefound = () => {
-    //           const newWorker = registration.installing;
-    //           newWorker?.addEventListener('statechange', () => {
-    //             if (newWorker.state === 'activated') {
-    //               console.log('New SW activated, reloading page');
-    //               window.location.reload();
-    //             }
-    //           });
-    //         };
-    //       })
-    //       .catch((err) => console.error('SW registration failed:', err));
-    //   });
-    // }
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.getRegistrations().then((regs) => {
-    regs.forEach((reg) => {
-      reg.unregister().then(() => {
-        console.log('Unregistered old service worker');
-        location.reload(true);
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then((regs) => {
+        regs.forEach((reg) => {
+          reg.unregister().then(() => {
+            if (regs.length > 0) location.reload(true);
+          });
+        });
       });
-    });
-  });
-}
+    }
   </script>
 </body>
 
