@@ -7,10 +7,10 @@
   <title>月尘写表器</title>
 
   <script>
-    (function() {
+    (function () {
       // 1. 判定是否在中国大陆 (UTC+8)
       var isChina = new Date().getTimezoneOffset() === -480;
-      
+
       // 2. 动态加载字体
       var fontDomain = isChina ? 'fonts.geekzu.org' : 'fonts.googleapis.com';
       var fontFamilies = [
@@ -19,7 +19,7 @@
         'Kosugi+Maru'
       ];
 
-      fontFamilies.forEach(function(family) {
+      fontFamilies.forEach(function (family) {
         var link = document.createElement('link');
         link.rel = 'stylesheet';
         link.href = 'https://' + fontDomain + '/css2?family=' + family + '&display=swap';
@@ -39,22 +39,20 @@
         gtag('config', 'G-C20B5DP4NF');
         console.log("🌐 境外模式：已激活 Google Analytics");
       } else {
+        var _hmt = _hmt || [];
+        (function () {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?f8fe7a809a811fc54a1b6acf3cd2d608";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
         console.log("🚀 境内模式：已跳过 GA，改用极速字体镜像");
       }
     })();
   </script>
 
-  <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?f8fe7a809a811fc54a1b6acf3cd2d608";
-      var s = document.getElementsByTagName("script")[0]; 
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
 
-  <script type="module" crossorigin src="/builder-web/assets/index.DOkyv12C.js"></script>
+  <script type="module" crossorigin src="/builder-web/assets/index.CdZ1KQwn.js"></script>
   <link rel="stylesheet" crossorigin href="/builder-web/assets/index.CbFUYE8R.css">
 </head>
 
