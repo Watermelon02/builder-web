@@ -612,7 +612,7 @@ For more information, see https://radix-ui.com/primitives/docs/components/${t.do
 `;const h=["torso","chasis","leftHand","rightHand","backpack"];for(const w of h){const b=p.parts[w];if(b){const D=b.throwIndex?` [throwIndex:${b.throwIndex}]`:"";c+=`${zl.en[w]}: ${b.id}${D}
 `}}const x=[];h.forEach(w=>{const b=p.parts[w];b?.projectile&&x.push(...b.projectile)}),x.length>0&&(c+=`Projectile: ${x.join(",")}
 `),c+=`
-`}for(const p of e.drones)c+=`# Drone ${p.name} ${p.id}
+`}for(const p of e.drones)c+=`# Drone ${p.id}
 `,p.projectile&&p.projectile.length>0&&(c+=`Projectile: ${p.projectile.join(",")}
 `),c+=`
 `;if(e.tacticCards&&e.tacticCards.length>0)for(const p of e.tacticCards)c+=`# TacticCard ${p.name} ${p.id}
