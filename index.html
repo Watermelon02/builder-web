@@ -60,8 +60,8 @@
   </script>
 
 
-  <script type="module" crossorigin src="/builder-web/assets/index.CStIJi76.js"></script>
-  <link rel="stylesheet" crossorigin href="/builder-web/assets/index.DCEWui9t.css">
+  <script type="module" crossorigin src="/builder-web/assets/index.BeQZ_fom.js"></script>
+  <link rel="stylesheet" crossorigin href="/builder-web/assets/index.CNuO5IdX.css">
 </head>
 
 <body>
@@ -70,9 +70,14 @@
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.getRegistrations().then((regs) => {
-        regs.forEach((reg) => {
+        console.log('🔍 [index.html] SW 清理: 发现 ' + regs.length + ' 个 Service Worker 注册');
+        if (regs.length === 0) return;
+        regs.forEach((reg, i) => {
           reg.unregister().then(() => {
-            if (regs.length > 0) location.reload(true);
+            console.log('🔍 [index.html] SW 已取消注册 (' + (i + 1) + '/' + regs.length + '):', reg.scope);
+            // 🔍 诊断模式：暂时注释掉硬刷新，观察缓存是否仍然丢失
+            // if (regs.length > 0) location.reload(true);
+            console.warn('🔍 [index.html] ⚠️ 硬刷新已禁用（诊断模式），原本会执行 location.reload(true)');
           });
         });
       });
