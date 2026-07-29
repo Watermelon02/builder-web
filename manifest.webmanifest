@@ -7,7 +7,7 @@
   "start_url": "/builder-web/",
   "scope": "/builder-web/",
   "display": "fullscreen",
-  "orientation": "portrait-primary",
+  "orientation": "any",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
   "icons": [
