@@ -1,0 +1,27 @@
+{
+  "name": "月尘写表器",
+  "short_name": "月尘",
+  "description": "月尘写表器与战棋对战工具",
+  "lang": "zh-CN",
+  "id": "/builder-web/",
+  "start_url": "/builder-web/",
+  "scope": "/builder-web/",
+  "display": "fullscreen",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/builder-web/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/builder-web/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
