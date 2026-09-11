@@ -1,0 +1,202 @@
+{
+  "building": {
+    "source": "public/models/terrain/patreon-2024-12/building.glb",
+    "sha256": "ff614efbdc4e1ede7e231360901030cd4f143bbba3bff1b8f3d795a46b7787ec",
+    "triangles": 60614,
+    "atlas": 1536,
+    "bounds": [
+      [
+        -39.11479949951172,
+        -39.114898681640625,
+        0.0
+      ],
+      [
+        39.11479949951172,
+        39.114898681640625,
+        107.74369812011719
+      ]
+    ],
+    "recipe": 3,
+    "variant": "full"
+  },
+  "high-wall": {
+    "source": "public/models/terrain/patreon-2024-12/high-wall.glb",
+    "sha256": "4968ba0c7357223aa0704df6f06769242618009907d9486c2f84f343ddda82d5",
+    "triangles": 13316,
+    "atlas": 1536,
+    "bounds": [
+      [
+        -37.54170227050781,
+        -12.500049591064453,
+        0.0
+      ],
+      [
+        37.54170227050781,
+        12.500049591064453,
+        75.0000991821289
+      ]
+    ],
+    "recipe": 3,
+    "variant": "full"
+  },
+  "low-wall": {
+    "source": "public/models/terrain/patreon-2024-12/low-wall.glb",
+    "sha256": "800f82f6b2e2d26384f2354cae5853956397aee8255a2793185779adecaf75d5",
+    "triangles": 3247,
+    "atlas": 1536,
+    "bounds": [
+      [
+        -37.50010681152344,
+        -12.500049591064453,
+        0.0
+      ],
+      [
+        37.50010681152344,
+        12.500049591064453,
+        42.900001525878906
+      ]
+    ],
+    "recipe": 3,
+    "variant": "full"
+  },
+  "long-box": {
+    "source": "public/models/terrain/patreon-2024-12/long-box.glb",
+    "sha256": "75cf0e81e70df05dca8f665595c2da1973bd7c72a5f8850dc0c54741754fd622",
+    "triangles": 5012,
+    "atlas": 1536,
+    "bounds": [
+      [
+        -25.0,
+        -12.500846862792969,
+        0.0
+      ],
+      [
+        25.0,
+        12.500846862792969,
+        25.0
+      ]
+    ],
+    "recipe": 3,
+    "variant": "full"
+  },
+  "short-box": {
+    "source": "public/models/terrain/patreon-2024-12/short-box.glb",
+    "sha256": "17415cfab9f524f5685c99a362d6724821971e9c7879fb85e9ae5a5ba62c0f59",
+    "triangles": 5014,
+    "atlas": 1536,
+    "bounds": [
+      [
+        -12.500001907348633,
+        -12.5,
+        0.0
+      ],
+      [
+        12.500000953674316,
+        12.5,
+        25.0
+      ]
+    ],
+    "recipe": 3,
+    "variant": "full"
+  },
+  "castle": {
+    "source": "public/models/terrain/chess-2025-01/castle.glb",
+    "sha256": "13798e614f2100fd03dad6da9b8a1cccbcee0fa85b8e437d6ca979a6c0b7eb21",
+    "triangles": 9600,
+    "atlas": 1536,
+    "bounds": [
+      [
+        -30.308088302612305,
+        -30.253681182861328,
+        -0.00018799124518409371
+      ],
+      [
+        30.308088302612305,
+        30.253681182861328,
+        102.9312744140625
+      ]
+    ],
+    "recipe": 3,
+    "variant": "full"
+  },
+  "castle-far": {
+    "source": "public/models/terrain/chess-2025-01/castle-far.glb",
+    "sha256": "614f1f8dec8282c608fec0abe09575c53e55354452d76d61da61fffdaa981624",
+    "triangles": 2400,
+    "atlas": 1536,
+    "bounds": [
+      [
+        -30.308088302612305,
+        -30.253681182861328,
+        -0.00018799124518409371
+      ],
+      [
+        30.308088302612305,
+        30.253681182861328,
+        102.9312744140625
+      ]
+    ],
+    "recipe": 3,
+    "variant": "full"
+  },
+  "pawn": {
+    "source": "public/models/terrain/chess-2025-01/pawn.glb",
+    "sha256": "e29f24964bb05d162a08058b350e43a59a0d164155cbdee2e748d7075a532f29",
+    "triangles": 9600,
+    "atlas": 1536,
+    "bounds": [
+      [
+        -25.0,
+        -25.0000057220459,
+        -0.01054174080491066
+      ],
+      [
+        25.000001907348633,
+        25.0000057220459,
+        58.46150207519531
+      ]
+    ],
+    "recipe": 2,
+    "variant": "full"
+  },
+  "pawn-far": {
+    "source": "public/models/terrain/chess-2025-01/pawn-far.glb",
+    "sha256": "3c48a2b0bdcd76b937a7bd6ce012e791062f14996c4a943da2e306938914312c",
+    "triangles": 2400,
+    "atlas": 1536,
+    "bounds": [
+      [
+        -25.0,
+        -25.0000057220459,
+        -0.01054174080491066
+      ],
+      [
+        25.000001907348633,
+        25.0000057220459,
+        58.46150207519531
+      ]
+    ],
+    "recipe": 2,
+    "variant": "full"
+  },
+  "base": {
+    "source": "public/models/terrain/chess-2025-01/base.glb",
+    "sha256": "5eec1782b94394550cd1796d6d070a8d7e8184c00493c4f4eedb98ba487d6ef3",
+    "triangles": 1600,
+    "atlas": 1536,
+    "bounds": [
+      [
+        -37.500099182128906,
+        -37.500099182128906,
+        -1.3582390238298103e-05
+      ],
+      [
+        37.500099182128906,
+        37.500099182128906,
+        15.000325202941895
+      ]
+    ],
+    "recipe": 2,
+    "variant": "full"
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "building": {
+    "file": "building.glb",
+    "size": [
+      78.229599,
+      107.743698,
+      78.229797
+    ],
+    "triangles": 60614,
+    "bytes": 1723388,
+    "parts": [
+      {
+        "file": "Building/[Building] [Main] [x1].stl",
+        "sha256": "c296d9c65cbed85b6487e5afc63e7c9c600d447b1a58a912892c20862d77eef4",
+        "copies": 1
+      },
+      {
+        "file": "Building/[Building] [Bottom] [x1].stl",
+        "sha256": "5b1cfabdaa77ac35ebb484af4c92d94755dd491eb45d01016a3aa880d2547d92",
+        "copies": 1
+      },
+      {
+        "file": "Building/[Building] [Top01] [x1].stl",
+        "sha256": "f2bd46045371a8bb3ee402c3702bbbd719a75fe2ba2173ff1f813341d0367d10",
+        "copies": 1
+      },
+      {
+        "file": "Building/[Building] [Top02] [x1].stl",
+        "sha256": "bd1f6f5b118c746d51d6daf0201823ab3c93ca3128137de36362a48732bf5c70",
+        "copies": 1
+      },
+      {
+        "file": "Building/[Building] [Buckle] [x4].stl",
+        "sha256": "98bf00a5d2cc1f99a4fccd033c4e6f566ed55b5c29707deb91fef602e38640b1",
+        "copies": 2
+      },
+      {
+        "file": "Building/[Building] [Buckle] [x4].stl",
+        "sha256": "98bf00a5d2cc1f99a4fccd033c4e6f566ed55b5c29707deb91fef602e38640b1",
+        "copies": 2
+      }
+    ]
+  },
+  "high-wall": {
+    "file": "high-wall.glb",
+    "size": [
+      75.083405,
+      75.000099,
+      25.000099
+    ],
+    "triangles": 13316,
+    "bytes": 358788,
+    "parts": [
+      {
+        "file": "3 inch Wall/[3 inch Wall] [Bottom] [x1].stl",
+        "sha256": "19c0c1ad42f9d1fc6cfc763f16de8c8b3412dfbecf841ca71038c31c984e60cc",
+        "copies": 1
+      },
+      {
+        "file": "3 inch Wall/[3 inch Wall] [Main] [x2].stl",
+        "sha256": "495142a26e9232107c5f1b9590536b5cfbbdaad16d20cc4ecdd484a61cf5cdca",
+        "copies": 2
+      },
+      {
+        "file": "3 inch Wall/[3 inch Wall] [Top] [x1].stl",
+        "sha256": "27bb9abbf6d1e4eb1bac5be4b72f42d68fa2c6a3b6e66c680d9305642f7309ef",
+        "copies": 1
+      }
+    ]
+  },
+  "low-wall": {
+    "file": "low-wall.glb",
+    "size": [
+      75.000214,
+      42.900002,
+      25.000099
+    ],
+    "triangles": 3247,
+    "bytes": 126672,
+    "parts": [
+      {
+        "file": "2 inch Wall/[2 inch Wall] [Bottom] [x1].stl",
+        "sha256": "93dbc60ef424ef45505cdb8d00c9c1dca2a3c484d5bebe03933dd38975da7a01",
+        "copies": 1
+      },
+      {
+        "file": "2 inch Wall/[3 inch Wall] [Main] [x2].stl",
+        "sha256": "f7eccaff8ce70db66d19c6b98adab9c17fe2c78a2840af36329bbdd2e11beced",
+        "copies": 2
+      },
+      {
+        "file": "2 inch Wall/[2 inch Wall] [Top] [x2].stl",
+        "sha256": "37119eca9d63fbe295886fd6cff2cd44fe606d1bb02edbbe4e52228c970b8a1b",
+        "copies": 2
+      }
+    ]
+  },
+  "long-box": {
+    "file": "long-box.glb",
+    "size": [
+      50.0,
+      25.0,
+      25.001694
+    ],
+    "triangles": 5012,
+    "bytes": 154228,
+    "parts": [
+      {
+        "file": "Long Box/[Long Box] [Main] [x1].stl",
+        "sha256": "4982f96eac121abf145d00fe980adf5c420b67f3999c21efbe21ded00b8cc7ea",
+        "copies": 1
+      },
+      {
+        "file": "Long Box/[Box] [Top] [x1].stl",
+        "sha256": "2f936381dd5e029751eb4b0e57ab6b6308abeb548fef8d2cfcd21873cb09d29c",
+        "copies": 1
+      }
+    ]
+  },
+  "short-box": {
+    "file": "short-box.glb",
+    "size": [
+      25.000004,
+      25.0,
+      25.0
+    ],
+    "triangles": 5014,
+    "bytes": 154268,
+    "parts": [
+      {
+        "file": "Short Box/[Short Box] [Main] [x1].stl",
+        "sha256": "c4f9740ceed4c6e6c94d1418896002ea8022eb126b6c85cec69d8421564aeb31",
+        "copies": 1
+      },
+      {
+        "file": "Short Box/[Box] [Top] [x1].stl",
+        "sha256": "2f936381dd5e029751eb4b0e57ab6b6308abeb548fef8d2cfcd21873cb09d29c",
+        "copies": 1
+      }
+    ]
+  }
+}

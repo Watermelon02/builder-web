@@ -1,0 +1,160 @@
+{
+  "castle": {
+    "file": "castle.glb",
+    "size": [
+      60.616177,
+      102.931465,
+      60.507362
+    ],
+    "sourceSize": [
+      60.745399,
+      102.981903,
+      60.745399
+    ],
+    "triangles": 9600,
+    "bytes": 341588,
+    "parts": [
+      {
+        "file": "Castle/Castle 01 Base.stl",
+        "sha256": "e6a7c4191347ff433d4f05ca67250393ae7b4e3ee5d6e0a6c0d69ab95a746bb1",
+        "copies": 1
+      },
+      {
+        "file": "Castle/Castle 02 Middle.stl",
+        "sha256": "5fd3dd47bd91d48ee4d02ad728ab0e645098ab24b45c2dfee20c3cd4a85e2215",
+        "copies": 1
+      },
+      {
+        "file": "Castle/Castel 03 Top.stl",
+        "sha256": "a61062019586e2ae6b67893b3893ba5155ec7ce24907de40beaf72128ff017de",
+        "copies": 1
+      }
+    ],
+    "maxTriangles": 12000
+  },
+  "castle-far": {
+    "file": "castle-far.glb",
+    "size": [
+      60.615501,
+      103.019936,
+      60.61219
+    ],
+    "sourceSize": [
+      60.745399,
+      102.981903,
+      60.745399
+    ],
+    "triangles": 2400,
+    "bytes": 88376,
+    "parts": [
+      {
+        "file": "Castle/Castle 01 Base.stl",
+        "sha256": "e6a7c4191347ff433d4f05ca67250393ae7b4e3ee5d6e0a6c0d69ab95a746bb1",
+        "copies": 1
+      },
+      {
+        "file": "Castle/Castle 02 Middle.stl",
+        "sha256": "5fd3dd47bd91d48ee4d02ad728ab0e645098ab24b45c2dfee20c3cd4a85e2215",
+        "copies": 1
+      },
+      {
+        "file": "Castle/Castel 03 Top.stl",
+        "sha256": "a61062019586e2ae6b67893b3893ba5155ec7ce24907de40beaf72128ff017de",
+        "copies": 1
+      }
+    ],
+    "maxTriangles": 3000,
+    "voxelSize": 0.5
+  },
+  "pawn": {
+    "file": "pawn.glb",
+    "size": [
+      50.0,
+      58.472042,
+      50.000011
+    ],
+    "sourceSize": [
+      50.0,
+      58.461502,
+      50.0
+    ],
+    "triangles": 9600,
+    "bytes": 298428,
+    "parts": [
+      {
+        "file": "Pawn/Pawn 01 Base.stl",
+        "sha256": "e6a7c4191347ff433d4f05ca67250393ae7b4e3ee5d6e0a6c0d69ab95a746bb1",
+        "copies": 1
+      },
+      {
+        "file": "Pawn/Pawn 03 Top.stl",
+        "sha256": "68ffa0edd16da92b43f6d9d0958fce749825ff225c31b96d969901d2247124fd",
+        "copies": 1
+      },
+      {
+        "file": "Pawn/Pawn 02 Line x4.stl",
+        "sha256": "55f9c93808fadb293c9d332bef3a607352748b2b3c183efb8835c348c7096495",
+        "copies": 4
+      }
+    ],
+    "maxTriangles": 12000
+  },
+  "pawn-far": {
+    "file": "pawn-far.glb",
+    "size": [
+      50.034622,
+      58.550823,
+      50.019554
+    ],
+    "sourceSize": [
+      50.0,
+      58.461502,
+      50.0
+    ],
+    "triangles": 2400,
+    "bytes": 102340,
+    "parts": [
+      {
+        "file": "Pawn/Pawn 01 Base.stl",
+        "sha256": "e6a7c4191347ff433d4f05ca67250393ae7b4e3ee5d6e0a6c0d69ab95a746bb1",
+        "copies": 1
+      },
+      {
+        "file": "Pawn/Pawn 03 Top.stl",
+        "sha256": "68ffa0edd16da92b43f6d9d0958fce749825ff225c31b96d969901d2247124fd",
+        "copies": 1
+      },
+      {
+        "file": "Pawn/Pawn 02 Line x4.stl",
+        "sha256": "55f9c93808fadb293c9d332bef3a607352748b2b3c183efb8835c348c7096495",
+        "copies": 4
+      }
+    ],
+    "maxTriangles": 3000,
+    "voxelSize": 0.5
+  },
+  "base": {
+    "file": "base.glb",
+    "size": [
+      75.000198,
+      15.000339,
+      75.000198
+    ],
+    "sourceSize": [
+      75.000198,
+      15.0,
+      75.000198
+    ],
+    "triangles": 1600,
+    "bytes": 55596,
+    "parts": [
+      {
+        "file": "75mm Base/75mm Universal Base.stl",
+        "sha256": "ab8ecb34bc35cc460fe3e1cca5a186ce10b7f8ad2ffb483d52838e25c6448fe5",
+        "copies": 1
+      }
+    ],
+    "mountHeight": 12.5,
+    "maxTriangles": 2000
+  }
+}
