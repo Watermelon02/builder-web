@@ -66,7 +66,7 @@
   </script>
 
 
-  <script type="module" crossorigin src="/builder-web/assets/index.e882jA77.js"></script>
+  <script type="module" crossorigin src="/builder-web/assets/index.DwPpvcY-.js"></script>
   <link rel="modulepreload" crossorigin href="/builder-web/assets/runtimeErrorCapture.BJutgH6a.js">
   <link rel="stylesheet" crossorigin href="/builder-web/assets/index.BS0zIdF4.css">
 </head>
@@ -75,20 +75,32 @@
   <div id="root"></div>
 
   <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.getRegistrations().then((regs) => {
-        console.log('🔍 [index.html] SW 清理: 发现 ' + regs.length + ' 个 Service Worker 注册');
-        if (regs.length === 0) return;
-        regs.forEach((reg, i) => {
-          reg.unregister().then(() => {
-            console.log('🔍 [index.html] SW 已取消注册 (' + (i + 1) + '/' + regs.length + '):', reg.scope);
-            // 🔍 诊断模式：暂时注释掉硬刷新，观察缓存是否仍然丢失
-            // if (regs.length > 0) location.reload(true);
-            console.warn('🔍 [index.html] ⚠️ 硬刷新已禁用（诊断模式），原本会执行 location.reload(true)');
+    (async function () {
+      if (!('serviceWorker' in navigator)) return;
+      try {
+        var workerUrl = new URL('/builder-web/service-worker.js', location.origin).href;
+        var controller = navigator.serviceWorker.controller;
+        var controlledByLegacyWorker = controller && controller.scriptURL === workerUrl;
+        var regs = await navigator.serviceWorker.getRegistrations();
+        await Promise.all(regs.filter(function (reg) {
+          return [reg.active, reg.waiting, reg.installing].some(function (worker) {
+            return worker && worker.scriptURL === workerUrl;
           });
-        });
-      });
-    }
+        }).map(function (reg) { return reg.unregister(); }));
+
+        // 注销不会解除当前页面的控制；在线时通过新导航退出旧缓存。
+        if (controlledByLegacyWorker && !new URL(location.href).searchParams.has('_app_refresh')) {
+          var freshUrl = new URL(location.href);
+          freshUrl.searchParams.set('_app_refresh', String(Date.now()));
+          var response = await fetch(freshUrl.href, { cache: 'no-store' });
+          if (response.ok && (response.headers.get('content-type') || '').includes('text/html')) {
+            location.replace(freshUrl.href);
+          }
+        }
+      } catch (error) {
+        console.warn('暂时无法更新旧版缓存，将在下次打开时重试。', error);
+      }
+    })();
   </script>
 </body>
 
