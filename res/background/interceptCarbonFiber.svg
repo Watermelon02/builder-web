@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="horizontal-sheen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#111"/>
+      <stop offset="0.5" stop-color="#383838"/>
+      <stop offset="1" stop-color="#181818"/>
+    </linearGradient>
+    <linearGradient id="vertical-sheen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0d0d0d"/>
+      <stop offset="0.5" stop-color="#292929"/>
+      <stop offset="1" stop-color="#141414"/>
+    </linearGradient>
+    <pattern id="horizontal-fibers" width="8" height="8" patternUnits="userSpaceOnUse">
+      <path fill="url(#horizontal-sheen)" d="M0 0h8v8H0z"/>
+      <path d="M0 1h8M0 3h8M0 5h8M0 7h8" stroke="#aaa" stroke-width="0.4" opacity="0.18"/>
+    </pattern>
+    <pattern id="vertical-fibers" width="8" height="8" patternUnits="userSpaceOnUse">
+      <path fill="url(#vertical-sheen)" d="M0 0h8v8H0z"/>
+      <path d="M1 0v8M3 0v8M5 0v8M7 0v8" stroke="#aaa" stroke-width="0.4" opacity="0.14"/>
+    </pattern>
+  </defs>
+  <path fill="url(#vertical-fibers)" d="M0 0h32v32H0z"/>
+  <!-- Each row shifts one bundle: a staggered two-over, two-under weave. -->
+  <path fill="url(#horizontal-fibers)" d="M0 0h16v8H0zM8 8h16v8H8zM16 16h16v8H16zM0 24h8v8H0zM24 24h8v8H24z"/>
+</svg>

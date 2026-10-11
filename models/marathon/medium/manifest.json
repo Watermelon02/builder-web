@@ -4,6 +4,9 @@
     "sha256": "ff614efbdc4e1ede7e231360901030cd4f143bbba3bff1b8f3d795a46b7787ec",
     "triangles": 60614,
     "atlas": 512,
+    "recipe": 9,
+    "variant": "medium",
+    "design": "v9",
     "bounds": [
       [
         -39.11479949951172,
@@ -16,10 +19,86 @@
         107.74369812011719
       ]
     ],
-    "recipe": 3,
-    "variant": "medium",
-    "variantTriangles": {
-      "medium": 60614
+    "maps": [
+      "basecolor",
+      "normal",
+      "orm",
+      "emissive"
+    ],
+    "digitFaces": [
+      "front",
+      "back"
+    ],
+    "digitCount": 2,
+    "authoringRoot": "output/blender/building-sixviews-20261010",
+    "uv": {
+      "method": "reserved physical print carriers; original hardware UVs; ORM transferred; tangent-space normals reprojected in new frame",
+      "coverage": 0.38127432929144967,
+      "paddingPixels": 5.333333333333333,
+      "primaryTexelsPerMillimetre": 3.005606417233745,
+      "minPixelCellTexels": 0.7213455401360989
+    },
+    "graphicRevision": "building-sixviews",
+    "referencePreview": "output/imagegen/building-six-view-graphics-20261010/building-six-views-graphics-preview.png",
+    "finishRevision": "north-relay-coatings-1",
+    "finishRoot": "output/blender/marathon-finish-calibration-20261010",
+    "finishPalette": {
+      "282b2e": "41464a",
+      "e6e7e3": "dedfdb",
+      "4a4d4f": "55595b",
+      "cdd1d2": "cdd1d2",
+      "1552cf": "2e62c6",
+      "f08a24": "e98732",
+      "d4f033": "d2eb3c",
+      "575d61": "606669",
+      "2d4a35": "2d4a35"
+    },
+    "finishCoatings": {
+      "graphite": {
+        "source": "282b2e",
+        "color": "41464a",
+        "roughness": 0.78
+      },
+      "white": {
+        "source": "e6e7e3",
+        "color": "dedfdb",
+        "roughness": 0.72
+      },
+      "wall": {
+        "source": "4a4d4f",
+        "color": "55595b",
+        "roughness": 0.82
+      },
+      "cold": {
+        "source": "cdd1d2",
+        "color": "cdd1d2",
+        "roughness": 0.79
+      },
+      "blue": {
+        "source": "1552cf",
+        "color": "2e62c6",
+        "roughness": 0.64
+      },
+      "orange": {
+        "source": "f08a24",
+        "color": "e98732",
+        "roughness": 0.65
+      },
+      "lime": {
+        "source": "d4f033",
+        "color": "d2eb3c",
+        "roughness": 0.6
+      },
+      "guard": {
+        "source": "575d61",
+        "color": "606669",
+        "roughness": 0.75
+      },
+      "green": {
+        "source": "2d4a35",
+        "color": "2d4a35",
+        "roughness": 0.78
+      }
     }
   },
   "high-wall": {
@@ -27,6 +106,9 @@
     "sha256": "4968ba0c7357223aa0704df6f06769242618009907d9486c2f84f343ddda82d5",
     "triangles": 13316,
     "atlas": 512,
+    "recipe": 8,
+    "variant": "medium",
+    "design": "v9",
     "bounds": [
       [
         -37.54170227050781,
@@ -39,10 +121,84 @@
         75.0000991821289
       ]
     ],
-    "recipe": 3,
-    "variant": "medium",
-    "variantTriangles": {
-      "medium": 13316
+    "maps": [
+      "basecolor",
+      "normal",
+      "orm",
+      "emissive"
+    ],
+    "digitFaces": [
+      "front",
+      "back"
+    ],
+    "digitCount": 2,
+    "authoringRoot": "output/blender/marathon-terrain-v9-20261010",
+    "uv": {
+      "method": "reserved physical print carriers; original hardware UVs; ORM transferred; tangent-space normals reprojected in new frame",
+      "coverage": 0.3065931532118056,
+      "paddingPixels": 5.333333333333333,
+      "primaryTexelsPerMillimetre": 2.875817163536946,
+      "minPixelCellTexels": 0.7805789443885996
+    },
+    "finishRevision": "north-relay-coatings-1",
+    "finishRoot": "output/blender/marathon-finish-calibration-20261010",
+    "finishPalette": {
+      "282b2e": "41464a",
+      "e6e7e3": "dedfdb",
+      "4a4d4f": "55595b",
+      "cdd1d2": "cdd1d2",
+      "1552cf": "2e62c6",
+      "f08a24": "e98732",
+      "d4f033": "d2eb3c",
+      "575d61": "606669",
+      "2d4a35": "2d4a35"
+    },
+    "finishCoatings": {
+      "graphite": {
+        "source": "282b2e",
+        "color": "41464a",
+        "roughness": 0.78
+      },
+      "white": {
+        "source": "e6e7e3",
+        "color": "dedfdb",
+        "roughness": 0.72
+      },
+      "wall": {
+        "source": "4a4d4f",
+        "color": "55595b",
+        "roughness": 0.82
+      },
+      "cold": {
+        "source": "cdd1d2",
+        "color": "cdd1d2",
+        "roughness": 0.79
+      },
+      "blue": {
+        "source": "1552cf",
+        "color": "2e62c6",
+        "roughness": 0.64
+      },
+      "orange": {
+        "source": "f08a24",
+        "color": "e98732",
+        "roughness": 0.65
+      },
+      "lime": {
+        "source": "d4f033",
+        "color": "d2eb3c",
+        "roughness": 0.6
+      },
+      "guard": {
+        "source": "575d61",
+        "color": "606669",
+        "roughness": 0.75
+      },
+      "green": {
+        "source": "2d4a35",
+        "color": "2d4a35",
+        "roughness": 0.78
+      }
     }
   },
   "long-box": {
@@ -50,6 +206,9 @@
     "sha256": "75cf0e81e70df05dca8f665595c2da1973bd7c72a5f8850dc0c54741754fd622",
     "triangles": 5012,
     "atlas": 512,
+    "recipe": 8,
+    "variant": "medium",
+    "design": "v9",
     "bounds": [
       [
         -25.0,
@@ -62,10 +221,84 @@
         25.0
       ]
     ],
-    "recipe": 3,
-    "variant": "medium",
-    "variantTriangles": {
-      "medium": 5012
+    "maps": [
+      "basecolor",
+      "normal",
+      "orm",
+      "emissive"
+    ],
+    "digitFaces": [
+      "front",
+      "back"
+    ],
+    "digitCount": 2,
+    "authoringRoot": "output/blender/marathon-terrain-v9-20261010",
+    "uv": {
+      "method": "reserved physical print carriers; original hardware UVs; ORM transferred; tangent-space normals reprojected in new frame",
+      "coverage": 0.5704616970486112,
+      "paddingPixels": 5.333333333333333,
+      "primaryTexelsPerMillimetre": 6.896544383683552,
+      "minPixelCellTexels": 1.1822647514886089
+    },
+    "finishRevision": "north-relay-coatings-1",
+    "finishRoot": "output/blender/marathon-finish-calibration-20261010",
+    "finishPalette": {
+      "282b2e": "41464a",
+      "e6e7e3": "dedfdb",
+      "4a4d4f": "55595b",
+      "cdd1d2": "cdd1d2",
+      "1552cf": "2e62c6",
+      "f08a24": "e98732",
+      "d4f033": "d2eb3c",
+      "575d61": "606669",
+      "2d4a35": "2d4a35"
+    },
+    "finishCoatings": {
+      "graphite": {
+        "source": "282b2e",
+        "color": "41464a",
+        "roughness": 0.78
+      },
+      "white": {
+        "source": "e6e7e3",
+        "color": "dedfdb",
+        "roughness": 0.72
+      },
+      "wall": {
+        "source": "4a4d4f",
+        "color": "55595b",
+        "roughness": 0.82
+      },
+      "cold": {
+        "source": "cdd1d2",
+        "color": "cdd1d2",
+        "roughness": 0.79
+      },
+      "blue": {
+        "source": "1552cf",
+        "color": "2e62c6",
+        "roughness": 0.64
+      },
+      "orange": {
+        "source": "f08a24",
+        "color": "e98732",
+        "roughness": 0.65
+      },
+      "lime": {
+        "source": "d4f033",
+        "color": "d2eb3c",
+        "roughness": 0.6
+      },
+      "guard": {
+        "source": "575d61",
+        "color": "606669",
+        "roughness": 0.75
+      },
+      "green": {
+        "source": "2d4a35",
+        "color": "2d4a35",
+        "roughness": 0.78
+      }
     }
   },
   "low-wall": {
@@ -73,6 +306,9 @@
     "sha256": "800f82f6b2e2d26384f2354cae5853956397aee8255a2793185779adecaf75d5",
     "triangles": 3247,
     "atlas": 512,
+    "recipe": 8,
+    "variant": "medium",
+    "design": "v9",
     "bounds": [
       [
         -37.50010681152344,
@@ -85,10 +321,84 @@
         42.900001525878906
       ]
     ],
-    "recipe": 3,
-    "variant": "medium",
-    "variantTriangles": {
-      "medium": 3247
+    "maps": [
+      "basecolor",
+      "normal",
+      "orm",
+      "emissive"
+    ],
+    "digitFaces": [
+      "front",
+      "back"
+    ],
+    "digitCount": 2,
+    "authoringRoot": "output/blender/marathon-terrain-v9-20261010",
+    "uv": {
+      "method": "reserved physical print carriers; original hardware UVs; ORM transferred; tangent-space normals reprojected in new frame",
+      "coverage": 0.2763989766438802,
+      "paddingPixels": 5.333333333333333,
+      "primaryTexelsPerMillimetre": 4.2562849664439755,
+      "minPixelCellTexels": 1.0944732770855938
+    },
+    "finishRevision": "north-relay-coatings-1",
+    "finishRoot": "output/blender/marathon-finish-calibration-20261010",
+    "finishPalette": {
+      "282b2e": "41464a",
+      "e6e7e3": "dedfdb",
+      "4a4d4f": "55595b",
+      "cdd1d2": "cdd1d2",
+      "1552cf": "2e62c6",
+      "f08a24": "e98732",
+      "d4f033": "d2eb3c",
+      "575d61": "606669",
+      "2d4a35": "2d4a35"
+    },
+    "finishCoatings": {
+      "graphite": {
+        "source": "282b2e",
+        "color": "41464a",
+        "roughness": 0.78
+      },
+      "white": {
+        "source": "e6e7e3",
+        "color": "dedfdb",
+        "roughness": 0.72
+      },
+      "wall": {
+        "source": "4a4d4f",
+        "color": "55595b",
+        "roughness": 0.82
+      },
+      "cold": {
+        "source": "cdd1d2",
+        "color": "cdd1d2",
+        "roughness": 0.79
+      },
+      "blue": {
+        "source": "1552cf",
+        "color": "2e62c6",
+        "roughness": 0.64
+      },
+      "orange": {
+        "source": "f08a24",
+        "color": "e98732",
+        "roughness": 0.65
+      },
+      "lime": {
+        "source": "d4f033",
+        "color": "d2eb3c",
+        "roughness": 0.6
+      },
+      "guard": {
+        "source": "575d61",
+        "color": "606669",
+        "roughness": 0.75
+      },
+      "green": {
+        "source": "2d4a35",
+        "color": "2d4a35",
+        "roughness": 0.78
+      }
     }
   },
   "short-box": {
@@ -96,6 +406,9 @@
     "sha256": "17415cfab9f524f5685c99a362d6724821971e9c7879fb85e9ae5a5ba62c0f59",
     "triangles": 5014,
     "atlas": 512,
+    "recipe": 8,
+    "variant": "medium",
+    "design": "v9",
     "bounds": [
       [
         -12.500001907348633,
@@ -108,10 +421,81 @@
         25.0
       ]
     ],
-    "recipe": 3,
-    "variant": "medium",
-    "variantTriangles": {
-      "medium": 5014
+    "maps": [
+      "basecolor",
+      "normal",
+      "orm",
+      "emissive"
+    ],
+    "digitFaces": [],
+    "digitCount": 0,
+    "authoringRoot": "output/blender/marathon-terrain-v9-20261010",
+    "uv": {
+      "method": "reserved physical print carriers; original hardware UVs; ORM transferred; tangent-space normals reprojected in new frame",
+      "coverage": 0.5152312384711372,
+      "paddingPixels": 5.333333333333333,
+      "primaryTexelsPerMillimetre": 8.634920437665036,
+      "minPixelCellTexels": 1.4802720750282916
+    },
+    "finishRevision": "north-relay-coatings-1",
+    "finishRoot": "output/blender/marathon-finish-calibration-20261010",
+    "finishPalette": {
+      "282b2e": "41464a",
+      "e6e7e3": "dedfdb",
+      "4a4d4f": "55595b",
+      "cdd1d2": "cdd1d2",
+      "1552cf": "2e62c6",
+      "f08a24": "e98732",
+      "d4f033": "d2eb3c",
+      "575d61": "606669",
+      "2d4a35": "2d4a35"
+    },
+    "finishCoatings": {
+      "graphite": {
+        "source": "282b2e",
+        "color": "41464a",
+        "roughness": 0.78
+      },
+      "white": {
+        "source": "e6e7e3",
+        "color": "dedfdb",
+        "roughness": 0.72
+      },
+      "wall": {
+        "source": "4a4d4f",
+        "color": "55595b",
+        "roughness": 0.82
+      },
+      "cold": {
+        "source": "cdd1d2",
+        "color": "cdd1d2",
+        "roughness": 0.79
+      },
+      "blue": {
+        "source": "1552cf",
+        "color": "2e62c6",
+        "roughness": 0.64
+      },
+      "orange": {
+        "source": "f08a24",
+        "color": "e98732",
+        "roughness": 0.65
+      },
+      "lime": {
+        "source": "d4f033",
+        "color": "d2eb3c",
+        "roughness": 0.6
+      },
+      "guard": {
+        "source": "575d61",
+        "color": "606669",
+        "roughness": 0.75
+      },
+      "green": {
+        "source": "2d4a35",
+        "color": "2d4a35",
+        "roughness": 0.78
+      }
     }
   },
   "castle": {
