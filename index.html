@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="月尘" />
+  <title>月尘写表器</title>
+  <link rel="manifest" href="/builder-web/manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="/builder-web/icons/icon-192.png" />
+  <link rel="icon" type="image/webp" href="/builder-web/res/background/logo.webp" />
+  <script>
+    (function () {
+      var lang = localStorage.getItem('lang');
+      var titles = { zh: '月尘写表器', en: 'Ember Squad Builder', jp: '月塵スクワッドビルダー' };
+      if (lang && titles[lang]) document.title = titles[lang];
+    })();
+  </script>
+
+  <script>
+    (function () {
+      // 1. 判定是否在中国大陆 (UTC+8)
+      var isChina = new Date().getTimezoneOffset() === -480;
+
+      // 2. 动态加载字体
+      var fontDomain = isChina ? 'fonts.geekzu.org' : 'fonts.googleapis.com';
+      var fontFamilies = [
+        'Orbitron:wght@400;500;700',
+        'Noto+Sans+SC:wght@400;500;700',
+        'Kosugi+Maru'
+      ];
+
+      fontFamilies.forEach(function (family) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'https://' + fontDomain + '/css2?family=' + family + '&display=swap';
+        document.head.appendChild(link);
+      });
+
+      // 3. 动态加载 Google Analytics (仅限非中国地区)
+      if (!isChina) {
+        var gaScript = document.createElement('script');
+        gaScript.async = true;
+        gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-C20B5DP4NF';
+        document.head.appendChild(gaScript);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-C20B5DP4NF');
+        console.log("🌐 境外模式：已激活 Google Analytics");
+      } else {
+        var _hmt = _hmt || [];
+        (function () {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?f8fe7a809a811fc54a1b6acf3cd2d608";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+        console.log("🚀 境内模式：已跳过 GA，改用极速字体镜像");
+      }
+    })();
+  </script>
+
+
+  <script type="module" crossorigin src="/builder-web/assets/index.CqBBIuNL.js"></script>
+  <link rel="modulepreload" crossorigin href="/builder-web/assets/runtimeErrorCapture.BJutgH6a.js">
+  <link rel="stylesheet" crossorigin href="/builder-web/assets/index.BS0zIdF4.css">
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <script>
+    (async function () {
+      if (!('serviceWorker' in navigator)) return;
+      try {
+        var workerUrl = new URL('/builder-web/service-worker.js', location.origin).href;
+        var controller = navigator.serviceWorker.controller;
+        var controlledByLegacyWorker = controller && controller.scriptURL === workerUrl;
+        var regs = await navigator.serviceWorker.getRegistrations();
+        await Promise.all(regs.filter(function (reg) {
+          return [reg.active, reg.waiting, reg.installing].some(function (worker) {
+            return worker && worker.scriptURL === workerUrl;
+          });
+        }).map(function (reg) { return reg.unregister(); }));
+
+        // 注销不会解除当前页面的控制；在线时通过新导航退出旧缓存。
+        if (controlledByLegacyWorker && !new URL(location.href).searchParams.has('_app_refresh')) {
+          var freshUrl = new URL(location.href);
+          freshUrl.searchParams.set('_app_refresh', String(Date.now()));
+          var response = await fetch(freshUrl.href, { cache: 'no-store' });
+          if (response.ok && (response.headers.get('content-type') || '').includes('text/html')) {
+            location.replace(freshUrl.href);
+          }
+        }
+      } catch (error) {
+        console.warn('暂时无法更新旧版缓存，将在下次打开时重试。', error);
+      }
+    })();
+  </script>
+</body>
+
+</html>
