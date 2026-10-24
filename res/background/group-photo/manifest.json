@@ -1,0 +1,564 @@
+{
+  "version": "3",
+  "runtimeFormat": "lossless WebP",
+  "sourceFormat": "PNG",
+  "runtimeImageCount": 30,
+  "sourceImageCount": 30,
+  "files": [
+    {
+      "path": "six/cove-light.png",
+      "bytes": 324944,
+      "size": [
+        3351,
+        2539
+      ],
+      "sha256": "367a62a6b8216d4b5cd248cd170f67ad07ea808898e87c8d6ec2dddd347af235"
+    },
+    {
+      "path": "six/cove-light.webp",
+      "bytes": 185598,
+      "size": [
+        3351,
+        2539
+      ],
+      "sha256": "5ffc46ea322a09f76c56d41897c4f2b9b7e3defdec73e0190eabda9502a70cd6"
+    },
+    {
+      "path": "six/floor-base.png",
+      "bytes": 6026,
+      "size": [
+        3351,
+        2539
+      ],
+      "sha256": "a5fe9cbb38e66fb81b95475552fba027e665b40e14695453b9eb5ea3553ed147"
+    },
+    {
+      "path": "six/floor-base.webp",
+      "bytes": 400,
+      "size": [
+        3351,
+        2539
+      ],
+      "sha256": "e2ce3ffd1307a41fecff6e4fb7e87f5d2c7b9a1291698a1ce211b5cfe9148100"
+    },
+    {
+      "path": "six/floor-curves.png",
+      "bytes": 149001,
+      "size": [
+        3351,
+        2539
+      ],
+      "sha256": "8206f9e7c65c0e87d7a4590e3f01e204857184008f2d80833dac8c5563a6e0ee"
+    },
+    {
+      "path": "six/floor-curves.webp",
+      "bytes": 62382,
+      "size": [
+        3351,
+        2539
+      ],
+      "sha256": "bfa5ce56f5895c367a24a960546d9a03288e1e7bd8ed0f848390a4a5340ed78d"
+    },
+    {
+      "path": "six/hand-adam.png",
+      "bytes": 40671,
+      "size": [
+        3351,
+        2539
+      ],
+      "sha256": "40476a15aad9effaa8927e736083c90ff69de8ba9dd5c4a67a0f98b3fd4fc3f7"
+    },
+    {
+      "path": "six/hand-adam.webp",
+      "bytes": 17552,
+      "size": [
+        3351,
+        2539
+      ],
+      "sha256": "e9d4bab6d9d2f0bbf2ce1b3ba73ee5ce10f16fb6c35afbce811171bdcd0d08e8"
+    },
+    {
+      "path": "six/hand-god.png",
+      "bytes": 34247,
+      "size": [
+        3351,
+        2539
+      ],
+      "sha256": "c0e5f2432560ee39ea984fb5b26653a601e7bb8ebefd3120ff19ccc8c9291be3"
+    },
+    {
+      "path": "six/hand-god.webp",
+      "bytes": 14556,
+      "size": [
+        3351,
+        2539
+      ],
+      "sha256": "59bd27f4161b6d844bc0fd8acc35aa612314ddea032baa414e2620fc02603c6f"
+    },
+    {
+      "path": "six/moon-01.png",
+      "bytes": 3710,
+      "size": [
+        180,
+        180
+      ],
+      "sha256": "a1fe5284651e4c943d579097cb57681d4af0d42c857e4135ca0f59ce33124dba"
+    },
+    {
+      "path": "six/moon-01.webp",
+      "bytes": 2248,
+      "size": [
+        180,
+        180
+      ],
+      "sha256": "01539a76b591a062b6726ab50251b98d1586cb0a13914d6277d5bc54f584325c"
+    },
+    {
+      "path": "six/moon-02.png",
+      "bytes": 4765,
+      "size": [
+        180,
+        180
+      ],
+      "sha256": "2788d3f0f68ca035b7a0b7d116d7b0aa3bee9a7c3ac1419a4dd1b7b7ad6ce15f"
+    },
+    {
+      "path": "six/moon-02.webp",
+      "bytes": 2970,
+      "size": [
+        180,
+        180
+      ],
+      "sha256": "c6ddf032f9eaf01ace60143142298ac55be2a492dc7ba4e121e85e886033bc9f"
+    },
+    {
+      "path": "six/moon-03.png",
+      "bytes": 4738,
+      "size": [
+        180,
+        180
+      ],
+      "sha256": "b1d945f6560a5f15c8992d02016267641211a3a98a8519e481e2683d397d613b"
+    },
+    {
+      "path": "six/moon-03.webp",
+      "bytes": 2968,
+      "size": [
+        180,
+        180
+      ],
+      "sha256": "a1067b7fbbd21bc1feef33d5a2d2f62b4842cb9fb0ce2ea4b9555559ad5e8642"
+    },
+    {
+      "path": "six/moon-04.png",
+      "bytes": 4672,
+      "size": [
+        180,
+        180
+      ],
+      "sha256": "0cf52a17d2605187812083fdeea3034b359a1471211fbacb18dbface51641440"
+    },
+    {
+      "path": "six/moon-04.webp",
+      "bytes": 2848,
+      "size": [
+        180,
+        180
+      ],
+      "sha256": "c32a7e008dafc4c90522607a481493f44b45878289dc3f6ed1ed8e476d1a4ea9"
+    },
+    {
+      "path": "six/moon-05.png",
+      "bytes": 4539,
+      "size": [
+        180,
+        180
+      ],
+      "sha256": "b7ade16d38c5cd8683217e95ab9c41d43511cb2257ae6c8190ac0d4164350c29"
+    },
+    {
+      "path": "six/moon-05.webp",
+      "bytes": 2730,
+      "size": [
+        180,
+        180
+      ],
+      "sha256": "06f16068c512af3da71faee9be4eadb72fda3b621c0fca23d03f3575237a793b"
+    },
+    {
+      "path": "six/moon-06.png",
+      "bytes": 3880,
+      "size": [
+        180,
+        180
+      ],
+      "sha256": "947e4b8c517b2bbb296e920d819726a294b7f1e040a65119e2a7dbeefa446f15"
+    },
+    {
+      "path": "six/moon-06.webp",
+      "bytes": 2040,
+      "size": [
+        180,
+        180
+      ],
+      "sha256": "928b2ee5e320bb8db196c587aa1bc73e7df4652dbcb5b9f0fc1ad5cf20bd08d4"
+    },
+    {
+      "path": "six/moon-07.png",
+      "bytes": 4355,
+      "size": [
+        180,
+        180
+      ],
+      "sha256": "db855c5163bf48b5fdec79e5779be65ca87cfdac6a753d90ff499176cf4ed8c5"
+    },
+    {
+      "path": "six/moon-07.webp",
+      "bytes": 2674,
+      "size": [
+        180,
+        180
+      ],
+      "sha256": "bd8784cfca956b9d7a40a556d86a34cf1e3877bec4ebc568defd06bc9a95aae8"
+    },
+    {
+      "path": "six/moon-08.png",
+      "bytes": 4552,
+      "size": [
+        180,
+        180
+      ],
+      "sha256": "0e90e48fe0b945a9b7f805eb93b19832a16edcef6c1c5f14750a23cea8a6d3bb"
+    },
+    {
+      "path": "six/moon-08.webp",
+      "bytes": 2876,
+      "size": [
+        180,
+        180
+      ],
+      "sha256": "867c6f85cea71f9098e9b0c802b62327c1f9e0411698d62e14c0dc374c4f89f8"
+    },
+    {
+      "path": "six/moon-09.png",
+      "bytes": 4798,
+      "size": [
+        180,
+        180
+      ],
+      "sha256": "8ab8969390c39e3a2737a48593f6c2c7a46a8daa8a112f37f38b5dc3beabf5e3"
+    },
+    {
+      "path": "six/moon-09.webp",
+      "bytes": 3036,
+      "size": [
+        180,
+        180
+      ],
+      "sha256": "79a311ced400a91bb192c4a193bbac6f6b811a879528a020c6586d0fe17260f3"
+    },
+    {
+      "path": "six/moon-10.png",
+      "bytes": 4799,
+      "size": [
+        180,
+        180
+      ],
+      "sha256": "857ed837a9ff5e2ee5c4045803e51bffedd0c4f4778a71d566d79e48c39ea5d5"
+    },
+    {
+      "path": "six/moon-10.webp",
+      "bytes": 2914,
+      "size": [
+        180,
+        180
+      ],
+      "sha256": "e9aadfb47e01dbab6ca51e7e41c7ee6c8531a080c6186a1e52b61bb8e0838e3f"
+    },
+    {
+      "path": "six/moon-orbit.png",
+      "bytes": 33734,
+      "size": [
+        3351,
+        2539
+      ],
+      "sha256": "a0d7383d369114c57d398097662a849510fe8673c7dd7f515bd80e4b9b30309e"
+    },
+    {
+      "path": "six/moon-orbit.webp",
+      "bytes": 11114,
+      "size": [
+        3351,
+        2539
+      ],
+      "sha256": "1c63fdf48a08c4d6e3beebb5f962b515d8691313bc145de0406057f47fbc4d4e"
+    },
+    {
+      "path": "six/wall-mask.png",
+      "bytes": 325957,
+      "size": [
+        3351,
+        2539
+      ],
+      "sha256": "e91c6f94152c36d36ba9f8744738144219f457c1c513ffe0987930c466d89c3b"
+    },
+    {
+      "path": "six/wall-mask.webp",
+      "bytes": 213094,
+      "size": [
+        3351,
+        2539
+      ],
+      "sha256": "8b603c088991454d54846e98661e894d63dba38dbfdd3761b4ba0b9b5d70de5c"
+    },
+    {
+      "path": "six/wrist-transition.png",
+      "bytes": 21758,
+      "size": [
+        3351,
+        2539
+      ],
+      "sha256": "68cfc173f532490057a057a87fe8912c5c5f4f6b4cb8384a27085c6b278dd0a1"
+    },
+    {
+      "path": "six/wrist-transition.webp",
+      "bytes": 5412,
+      "size": [
+        3351,
+        2539
+      ],
+      "sha256": "01ca21d060472aa95ebdccd1e0ab63d44fdf7fb559947c35e7fa819d85ed972a"
+    },
+    {
+      "path": "three/cove-light.png",
+      "bytes": 143269,
+      "size": [
+        2835,
+        1518
+      ],
+      "sha256": "b1e4f810e96c7661afedab92b026e5595010703694c5f14c3d065eb435860d05"
+    },
+    {
+      "path": "three/cove-light.webp",
+      "bytes": 82798,
+      "size": [
+        2835,
+        1518
+      ],
+      "sha256": "793e1b38fb4c2c128076e6744ed0a2fd56a2575801bf20b1087c1a146fd8b8b3"
+    },
+    {
+      "path": "three/floor-base.png",
+      "bytes": 3540,
+      "size": [
+        2835,
+        1518
+      ],
+      "sha256": "26d2a03c1fa4da41514a8cc69eaacb4dd3cdec19bab9d920496246fb5382b719"
+    },
+    {
+      "path": "three/floor-base.webp",
+      "bytes": 224,
+      "size": [
+        2835,
+        1518
+      ],
+      "sha256": "d286fc6bfcb8455a93698954d69498ced4e76b748ce52df3c61a91d685bd26df"
+    },
+    {
+      "path": "three/floor-curves.png",
+      "bytes": 93110,
+      "size": [
+        2835,
+        1518
+      ],
+      "sha256": "af7623ba1ae19ca42e72a43bf95d0052bd210802a00d84dc7e47288f1e2bc260"
+    },
+    {
+      "path": "three/floor-curves.webp",
+      "bytes": 42284,
+      "size": [
+        2835,
+        1518
+      ],
+      "sha256": "eae89b7a2cbabd15e5968a53bc13652cdd68d03755a3495b7813de59e2872cfe"
+    },
+    {
+      "path": "three/hand-adam.png",
+      "bytes": 17700,
+      "size": [
+        2835,
+        1518
+      ],
+      "sha256": "ac7190865cdef6e33b368e33638b9e0c5b89d3b5bc25e147ad49cdf13d598625"
+    },
+    {
+      "path": "three/hand-adam.webp",
+      "bytes": 8148,
+      "size": [
+        2835,
+        1518
+      ],
+      "sha256": "83163dbb219438589a8a706c3b3cc1dc07d8b5c6e8f4e9b6243e83a5d375113e"
+    },
+    {
+      "path": "three/hand-god.png",
+      "bytes": 20058,
+      "size": [
+        2835,
+        1518
+      ],
+      "sha256": "a448945e49f128b1c12943a1d84eae354f6fcce2891fca5277074aa817fb0e63"
+    },
+    {
+      "path": "three/hand-god.webp",
+      "bytes": 9462,
+      "size": [
+        2835,
+        1518
+      ],
+      "sha256": "4d31eafefcd08ecf0d1b75ce8277be6128a6ffe2fdfa8bd241b682288dfc451d"
+    },
+    {
+      "path": "three/moon-01.png",
+      "bytes": 2891,
+      "size": [
+        150,
+        150
+      ],
+      "sha256": "ab57a7e6efc74b5991f1362a51034b7a9671d840c002efe7173f0981d4a7832e"
+    },
+    {
+      "path": "three/moon-01.webp",
+      "bytes": 2054,
+      "size": [
+        150,
+        150
+      ],
+      "sha256": "b33ee587d4e0ec433f00f34654c7361c9eb50e70d807a3485a169cce76850887"
+    },
+    {
+      "path": "three/moon-02.png",
+      "bytes": 4031,
+      "size": [
+        150,
+        150
+      ],
+      "sha256": "0aac893e35214e2c8f273dcc78c596f8db1a7922d7ea42c61e9058b116bac2c6"
+    },
+    {
+      "path": "three/moon-02.webp",
+      "bytes": 2836,
+      "size": [
+        150,
+        150
+      ],
+      "sha256": "43cc7b69db345474076fe3f40c5e03df566825ac3ac04c13ab3824568c633381"
+    },
+    {
+      "path": "three/moon-03.png",
+      "bytes": 3236,
+      "size": [
+        150,
+        150
+      ],
+      "sha256": "d86230bfd5183430b9b47fb81f215a8be0d501155244f0c52770a587944a1443"
+    },
+    {
+      "path": "three/moon-03.webp",
+      "bytes": 1856,
+      "size": [
+        150,
+        150
+      ],
+      "sha256": "d32d84f10c59167493b043e794a3e55418f9c8d0b145fbcafde7ae514180f90b"
+    },
+    {
+      "path": "three/moon-04.png",
+      "bytes": 2423,
+      "size": [
+        150,
+        150
+      ],
+      "sha256": "5fb4903aeec567b44cf4cc9b59ddc9e5af05b2199cef97d246ff6d0f39f193e4"
+    },
+    {
+      "path": "three/moon-04.webp",
+      "bytes": 1406,
+      "size": [
+        150,
+        150
+      ],
+      "sha256": "8f39b290b4c858182bccb7b99d08bbcf04ce61297170703d5ce02d18c5f59dd0"
+    },
+    {
+      "path": "three/moon-orbit.png",
+      "bytes": 9345,
+      "size": [
+        2835,
+        1518
+      ],
+      "sha256": "2ce1d38766fc19d16c89f167b2e47d51c2bbdbc673fce0dc71c1593401c6f6ee"
+    },
+    {
+      "path": "three/moon-orbit.webp",
+      "bytes": 2344,
+      "size": [
+        2835,
+        1518
+      ],
+      "sha256": "c703aa7fe0d957aa0a9343f1946b00e47f25a96d1d6c2c7faf2d432f89e7256e"
+    },
+    {
+      "path": "three/wall-mask.png",
+      "bytes": 206869,
+      "size": [
+        2835,
+        1518
+      ],
+      "sha256": "5f7969c0c12000e20196528bfaa2d98e2059df1959e2cc41c5848543dd48e2d4"
+    },
+    {
+      "path": "three/wall-mask.webp",
+      "bytes": 136204,
+      "size": [
+        2835,
+        1518
+      ],
+      "sha256": "d7279cd906a9694b4123bf773d3e27ed0754dc24ed80a5e9901aa0c582edfdeb"
+    },
+    {
+      "path": "three/wrist-transition.png",
+      "bytes": 15750,
+      "size": [
+        2835,
+        1518
+      ],
+      "sha256": "7d7da4feea6fbb01ea8d3c0674010932991b74a0bd1c1396763434fcbd54d0ed"
+    },
+    {
+      "path": "three/wrist-transition.webp",
+      "bytes": 3934,
+      "size": [
+        2835,
+        1518
+      ],
+      "sha256": "4f7f5088fa77b54e71e7e06a8bdcc68091ed96ab9fce6d362585e29d2f221ff6"
+    }
+  ],
+  "scenes": {
+    "shared": {
+      "folders": [
+        "three",
+        "six"
+      ],
+      "factions": [
+        "RDL",
+        "UN",
+        "GOF"
+      ],
+      "productionHost": "BACKGROUND_SRC[lang]",
+      "version": "3"
+    }
+  }
+}
