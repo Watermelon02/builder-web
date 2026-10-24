@@ -1,0 +1,1 @@
+const l=/^([A-Za-z][A-Za-z0-9-]{2,})\s*(.+)$/u;function o(s){const t=s.trim().replace(/\s+/gu," "),a=t.match(l);if(!a)return{label:t};const e=a[1];return/[0-9-]/u.test(e)||e===e.toUpperCase()?{model:e,label:a[2].trim()}:{label:t}}export{o as g};
