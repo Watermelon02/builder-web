@@ -9,6 +9,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="月尘" />
   <title>月尘写表器</title>
+  <!-- Critical startup presentation is shared with AppLoading, before any bundle is ready. -->
+  <style id="app-loading-styles">.app-loading{position:fixed;inset:0;min-height:100vh;display:grid;place-items:center;overflow:hidden;isolation:isolate;box-sizing:border-box;padding:24px;background:#fff url(/builder-web/res/background/background.svg) center / cover;color:#666;font:14px system-ui,sans-serif}.app-loading__shade{position:absolute;inset:0;z-index:-1;background:#0009}.app-loading__card{box-sizing:border-box;display:flex;flex-direction:column;align-items:center;gap:24px;width:min(360px,88vw);padding:36px 28px;border-radius:12px;background:#ffffffeb;border:1px solid rgba(255,255,255,.3);box-shadow:0 8px 32px #00000026;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}.app-loading__logo{display:block;width:80px;height:8vh;min-height:40px;max-height:80px;background:url(data:image/webp;base64,UklGRngDAABXRUJQVlA4WAoAAAAQAAAAvwEADQIAQUxQSNcAAAABDzD/ERHCcW27cSKdBLRUCSrFpZnSKIUSWM6wm/yOwowj+j8B5+7/d1qXBjd9Xt3/b7AuDW76rrr/35hdGtx8TVi/DDZPi8NkOl1Qkzhns8AsMSvMGrO5pLR1wJwoizNlhdlcFE2dKMsz5UQ5X+kPj02mIR2dTDKVajolnUjHQQ1fYekMGE1HsqmYkk5gPB3DDBjFSDYVUzCBcYxhBoxihFIxBRMYxxhmwChGKAUTGMcYRjFCKZjAGGbACKVgHGMYpVShOGbACCUwhhFKYJQSQlGKCcTkcgBWUDggegIAANBEAJ0BKsABDgI+bTaXSKQjIiEkn7gAgA2JaW7hdZCWt1uYHgD+AfgB+gH5+9/i8A5xzjnHOOcc45xzjnHOOcc45xzjnHOOcc45xzjnHOOcc45xzjnHOOcc45xzjnHOOcc45xzjnHOOcc45xzjnHOOcVwW4t+URo+04jR9pxGj7TiMG1TpB/eHNnKH94c45xzi1bfeHOOM7ZmEY5xzjmzlD+8OcWrb7w5xzjnHGdszCMc2BQ6bMukmhJdJNCS6SaEl0k0Fo1IRjSzX5YkBICQEgJASAkBICQEgJASAkBICQEgJASAkBICQEgJASAkBICQEgJASAkBICQEgJASAkBICQEgJASAkBICQEgIxRfxmnEaPtOI0facRo+04jR550Jyc45xzZzf5YkBICQEZRJr8sR+ZlLNfliQEgGRD8sSAjKJNfliQEgI/MylmvywyfJJoSXSTQkukmhJdJNCS4FLNfliQEgJASAkBICQEgJASAkBICQEgJASAkBICQEgJASAkBICQEgJASAkBICQEgJASAkBICQEYRiLLpJoSXSTQkukmhJdJNBH3nuvyxIBkQ/LEgJASAjKJNfliPzMpZr8sSAkAuLnK+3TIy2ZXKH94c45xxVF0KmpkZbM9aFaZ94c45s5Q/u4YqbiEl0kzXbM+8Occ2cof3cY10KQ5xzjnHOOcc2cof2d4CTegSAkBICQEgJAMiH45XDysk1+WJASAkBICMokGFflkj6YjX2IAA/u3QAAAAdbTOkeR7daKMgAAAAAAAOFYmxbsQhWAAAAAADGTN0jyPbrRRk73Zqxn/ufplF8IPf+/RCGsE/yqROdt/ndyuBnlUgAA=) center / contain no-repeat}.app-loading__track{width:100%;height:6px;overflow:hidden;border-radius:3px;background:#00000014}.app-loading__track>span{display:block;height:100%;width:35%;border-radius:inherit;background:#666;animation:app-loading-progress 1.4s ease-in-out infinite}.app-loading__message{text-align:center;line-height:1.5}@keyframes app-loading-progress{0%{transform:translate(-100%)}to{transform:translate(385%)}}@media(prefers-reduced-motion:reduce){.app-loading__track>span{animation:none;margin-inline:auto}}</style>
   <link rel="manifest" href="/builder-web/manifest.webmanifest" />
   <link rel="apple-touch-icon" href="/builder-web/icons/icon-192.png" />
   <link rel="icon" type="image/webp" href="/builder-web/res/background/logo.webp" />
@@ -25,22 +27,9 @@
       // 1. 判定是否在中国大陆 (UTC+8)
       var isChina = new Date().getTimezoneOffset() === -480;
 
-      // 2. 动态加载字体
-      var fontDomain = isChina ? 'fonts.geekzu.org' : 'fonts.googleapis.com';
-      var fontFamilies = [
-        'Orbitron:wght@400;500;700',
-        'Noto+Sans+SC:wght@400;500;700',
-        'Kosugi+Maru'
-      ];
+      // 字体由应用入口在资源 worker 就绪后加载，避免首次请求绕过持久缓存。
 
-      fontFamilies.forEach(function (family) {
-        var link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = 'https://' + fontDomain + '/css2?family=' + family + '&display=swap';
-        document.head.appendChild(link);
-      });
-
-      // 3. 动态加载 Google Analytics (仅限非中国地区)
+      // 2. 动态加载 Google Analytics (仅限非中国地区)
       if (!isChina) {
         var gaScript = document.createElement('script');
         gaScript.async = true;
@@ -66,18 +55,28 @@
   </script>
 
 
-  <script type="module" crossorigin src="/builder-web/assets/index.BXKBLxTW.js"></script>
-  <link rel="modulepreload" crossorigin href="/builder-web/assets/index.DMfOPRK_.js">
-  <link rel="modulepreload" crossorigin href="/builder-web/assets/job.DNIon_lX.js">
-  <link rel="stylesheet" crossorigin href="/builder-web/assets/index.aFuLqKBD.css">
+  <script type="module" crossorigin src="/builder-web/assets/index.CoLb0Syv.js"></script>
+  <link rel="modulepreload" crossorigin href="/builder-web/assets/jsx-runtime.vli48Jje.js">
+  <link rel="modulepreload" crossorigin href="/builder-web/assets/resource.InToTwyM.js">
+  <link rel="stylesheet" crossorigin href="/builder-web/assets/index.BJDD0QlU.css">
 </head>
 
 <body>
-  <div id="root"></div>
+  <!-- Visible before the entry bundle, React and the resource worker are ready. -->
+  <div id="root">
+    <div class="app-loading" role="status" aria-live="polite">
+      <div class="app-loading__shade" aria-hidden="true"></div>
+      <div class="app-loading__card">
+        <span class="app-loading__logo" role="img" aria-label="月尘"></span>
+        <div class="app-loading__track" aria-hidden="true"><span></span></div>
+        <div class="app-loading__message">加载资源中…</div>
+      </div>
+    </div>
+  </div>
 
   <script>
-    (async function () {
-      if (!('serviceWorker' in navigator)) return;
+    globalThis.__legacyResourceMigration = (async function () {
+      if (!('serviceWorker' in navigator)) return false;
       try {
         var workerUrl = new URL('/builder-web/service-worker.js', location.origin).href;
         var controller = navigator.serviceWorker.controller;
@@ -96,11 +95,13 @@
           var response = await fetch(freshUrl.href, { cache: 'no-store' });
           if (response.ok && (response.headers.get('content-type') || '').includes('text/html')) {
             location.replace(freshUrl.href);
+            return true;
           }
         }
       } catch (error) {
         console.warn('暂时无法更新旧版缓存，将在下次打开时重试。', error);
       }
+      return false;
     })();
   </script>
 </body>
