@@ -1,1 +1,0 @@
-export{s as default}from"./App.BljlPy0a.js";
