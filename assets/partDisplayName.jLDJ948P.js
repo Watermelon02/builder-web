@@ -1,0 +1,1 @@
+var e=/^([A-Za-z][A-Za-z0-9-]{2,})\s*(.+)$/u;function t(t){let n=t.trim().replace(/\s+/gu,` `),r=n.match(e);if(!r)return{label:n};let i=r[1];return/[0-9-]/u.test(i)||i===i.toUpperCase()?{model:i,label:r[2].trim()}:{label:n}}export{t};
